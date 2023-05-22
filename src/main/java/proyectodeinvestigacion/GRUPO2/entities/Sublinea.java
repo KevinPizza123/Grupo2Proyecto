@@ -2,12 +2,7 @@ package proyectodeinvestigacion.GRUPO2.entities;
 
 import java.util.List;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,6 +19,6 @@ public class Sublinea {
     private String nombre;
     private String descripcion;
 
-    @ManyToMany(mappedBy = "sublineas")
-    private List<Linea> lineas;
+    @ManyToOne
+    private Linea  linea;
 }

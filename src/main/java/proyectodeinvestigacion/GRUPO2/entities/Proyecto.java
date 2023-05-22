@@ -21,12 +21,7 @@ public class Proyecto {
     private String justificacion;
     private String antecedentes;
 
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(
-            name = "programa_proyecto",
-            joinColumns = @JoinColumn(name = "proyecto_id"),
-            inverseJoinColumns = @JoinColumn(name = "programa_id")
-    )
-    private List<Programa> programas;
+    @ManyToOne
+    private Programa programa;
 
 }

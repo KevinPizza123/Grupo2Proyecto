@@ -29,7 +29,6 @@ public class Linea {
     private String estado;
     private LocalDate fecha_aprobacion;
 
-    @ManyToMany()
-    @JoinTable(name = "linea_sublinea", joinColumns = @JoinColumn(name = "linea_id"), inverseJoinColumns = @JoinColumn(name = "sublinea_id"))
-    private List<Sublinea> sublineas;
+
+
 }
